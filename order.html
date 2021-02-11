@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INON Dashbord</title>
+    <link rel="shortcut icon" type="image/x-icon" href="img/Image20210126153231.png"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="css/order.css">
+    <link rel="stylesheet" href="css/utilty.css">
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="w3-sidebar w3-bar-block w3-collapse w3-animate-left" style="width:242px;" id="mySidebar">
+                <div class="side-bar">
+                    <div class="container-fluid">
+                        <div class="sidenav">
+                            <div class="container-fluid">
+                                <button class="w3-bar-item w3-hide-large" onclick="w3_close()"> &times;</button>
+                                <a href="home.html"><img src="img/go-back-left-arrow (1).svg" alt=""></a>
+                                <img src="img/101.svg" class="logo" alt="">
+                                <div class="main">
+                                    <h1>Main</h1>
+                                    <a href="dashboard-2.html">
+                                    <div class="dash d-flex menu">
+                                        <div class="side-nav-img  d-flex">
+                                            <img src="img/dashboard (1).svg" alt="">
+                                            <h2>Dashboard</h2>
+                                        </div>
+                                    </div>
+                                    </a>
+                                    <a href="safe.html">
+                                    <div class="Earnings d-flex menu">
+                                        <div class="side-nav-img d-flex">
+                                            <img src="img/safe (1).svg" alt="">
+                                            <h2>Safe</h2>
+                                        </div>
+                                    </div>
+                                    </a>
+                                    <a href="history.html">
+                                    <div class="Earnings d-flex menu">
+                                        <div class="side-nav-img d-flex">
+                                            <img src="img/History.svg" alt="">
+                                            <h2>History</h2>
+                                        </div>
+                                    </div>
+                                    </a>
+                                    <a href="archive.html">
+                                    <div class="Earnings d-flex menu">
+                                        <div class="side-nav-img d-flex">
+                                            <img src="img/Archive.svg" alt="">
+                                            <h2>Aechive</h2>
+                                        </div>
+                                    </div>
+                                    </a>
+                                </div>
+                                <div class="Upcoming">
+                                    <h1>Upcoming</h1>
+                                    <a href="order.html">
+                                    <div class="dash d-flex menu">
+                                        <div class="side-nav-img active d-flex">
+                                            <img src="img/orders (2).svg" alt="">
+                                            <h2>Order</h2>
+                                        </div>
+                                    </div>
+                                    </a>
+                                    <a href="recipts.html">
+                                    <div class="Earnings d-flex menu">
+                                        <div class="side-nav-img d-flex">
+                                            <img src="img/receipts.svg" alt="">
+                                            <h2>Receipts</h2>
+                                        </div>
+                                    </div>
+                                    </a>
+                                </div>
+                                <div class="Kitchen">
+                                    <h1>Kitchen</h1>
+                                    <a href="menu.html">
+                                    <div class="dash d-flex menu">
+                                        <div class="side-nav-img d-flex">
+                                            <img src="img/menu.svg" alt="">
+                                            <h2>Menu</h2>
+                                        </div>
+                                    </div>
+                                    </a>
+                                    <a href="stcok.html">
+                                    <div class="Earnings d-flex menu">
+                                        <div class="side-nav-img d-flex">
+                                            <img src="img/stock.svg" alt="">
+                                            <h2>Stock</h2>
+                                        </div>
+                                    </div>
+                                    </a>
+                                    <a href="repices.html">
+                                    <div class="Earnings d-flex menu">
+                                        <div class="side-nav-img d-flex">
+                                            <img src="img/recipes.svg" alt="">
+                                            <h2>Recipes</h2>
+                                        </div>
+                                    </div>
+                                    </a>
+                                </div>
+                                <div class="Gym">
+                                    <h1>Restaurant</h1>
+                                    <a href="table.html">
+                                        <div class="Branches d-flex menu">
+                                            <div class="side-nav-img d-flex">
+                                                <img src="img/table.svg" alt="">
+                                                <h2>Table</h2>
+                                            </div>
+                                    </div>
+                                    </a>
+                                    <a href="device-2.html">
+                                        <div class="Offers d-flex menu">
+                                            <div class="side-nav-img d-flex">
+                                                <img src="img/devices.svg" alt="">
+                                                <h2>Devices</h2>
+                                            </div>
+                                    </div>
+                                    </a>
+                                    <a href="app.html">
+                                        <div class="Expenses d-flex menu">
+                                            <div class="side-nav-img d-flex">
+                                                <img src="img/application.svg" alt="">
+                                                <h2>Application</h2>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="account-2.html">
+                                        <div class="Expenses d-flex menu">
+                                            <div class="side-nav-img d-flex">
+                                                <img src="img/accounts.svg" alt="">
+                                                <h2>Accounts</h2>
+                                            </div>
+                                    </div>
+                                    </a>
+                                </div>
+                                <div class="Reating">
+                                    <h1>Reating</h1>
+                                    <a href="question.html">
+                                    <div class="dash d-flex menu">
+                                        <div class="side-nav-img d-flex">
+                                            <img src="img/questions.svg" alt="">
+                                            <h2>Questions</h2>
+                                        </div>
+                                    </div>
+                                    </a>
+                                    <a href="ratting.html">
+                                    <div class="Earnings d-flex menu">
+                                        <div class="side-nav-img d-flex">
+                                            <img src="img/rating.svg" alt="">
+                                            <h2>User'Rating</h2>
+                                        </div>
+                                    </div>
+                                    </a>
+                                    <a href="branches-2.html">
+                                    <div class="Earnings d-flex menu">
+                                        <div class="side-nav-img d-flex">
+                                            <img src="img/back-arrow.svg" alt="">
+                                            <h2 class="color-red">Back To Main</h2>
+                                        </div>
+                                    </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="w3-main" style="margin-left:242px">
+            <div class="teal d-flex">
+                <button class="button w3-xlarge w3-hide-large" onclick="w3_open()">&#9776;</button>
+                <nav>
+                    <div class="w3-container">
+                        <!-- <nav> -->
+                                            <div class="container-fluid">
+                                                <div class="div d-flex">
+                                                    <div class="right">
+                                                        <h1>Dashboard</h1>
+                                                    </div>
+                                                    <div class="left d-flex">   
+                                                        <a href="#!"><img src="img/cctv.svg" class="cctv"></a>
+                                                        <a class="openCvBtn" href="#!" id="openApplayForm"><img src="img/bell-solid (1).svg" class="cctv"></a>
+                                                        <a href="person.html"><img src="img/10.png"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                        <!-- </nav> -->
+                    </div>
+                </nav>
+            </div>
+            <div class="restOfScreen">
+                <div class="col-lg-12" style="padding: 0;">
+                    <div class="container-fluid">
+                        <input type="text" id="search" name="search" placeholder="Search">
+                        <div class="row">
+                            <div class="col-lg-12" style="padding: 0;">
+                                <div id="myBtnContainer">
+                                    <div class="col-lg-12 d-flex">
+                                        <div class="col-lg-2 table active">
+                                            <a href="#!" class="button-all " onclick="filterSelection('all')">
+                                                <h1>All <span>(46)</span></h1>
+                                            </a>
+                                        </div>
+                                        <div class="col-lg-2 table">
+                                            <a href="#!" class="button-all" onclick="filterSelection('Table1')">
+                                                <h1>Table 1 <span>(4)</span></h1>
+                                            </a>
+                                        </div>
+                                        <div class="col-lg-2 table">
+                                            <a href="#!" class="button-all" onclick="filterSelection('Table2')">
+                                                <h1>Table 2 <span>(0)</span></h1>
+                                            </a>
+                                        </div>
+                                        <div class="col-lg-2 table">
+                                            <a href="#!" class="button-all" onclick="filterSelection('Table3')">
+                                                <h1>Table 3 <span>(0)</span></h1>
+                                            </a>
+                                        </div>
+                                        <div class="col-lg-2 table">
+                                            <a href="#!" class="button-all" onclick="filterSelection('Table4')">
+                                                <h1>Table 4 <span>(8)</span></h1>
+                                            </a>
+                                        </div>
+                                        <div class="col-lg-2 table">
+                                            <a href="#!" class="button-all" onclick="filterSelection('Table5')">
+                                                <h1>Table 5 <span>(16)</span></h1>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 d-flex">
+                                        <div class="col-lg-2 table">
+                                            <a href="#!" class="button-all" onclick="filterSelection('Table6')">
+                                                <h1>Table 6 <span>(0)</span></h1>
+                                            </a>
+                                        </div>
+                                        <div class="col-lg-2 table">
+                                            <a href="#!" class="button-all" onclick="filterSelection('Table7')">
+                                                <h1>Table 7 <span>(7)</span></h1>
+                                            </a>
+                                        </div>
+                                        <div class="col-lg-2 table">
+                                            <a href="#!" class="button-all" onclick="filterSelection('Table8')">
+                                                <h1>Table 8 <span>(10)</span></h1>
+                                            </a>
+                                        </div>
+                                        <div class="col-lg-2 table">
+                                            <a href="#!" class="button-all" onclick="filterSelection('Table9')">
+                                                <h1>Table 9 <span>(1)</span></h1>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="container-1">
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-4 filterDiv Table1 Table5">
+                                            <div class="table-div">
+                                                <h1>Receipt #26328193</h1>
+                                                <div class="border-bottom-1"></div>
+                                                <div class="between">
+                                                    <h2>table 7</h2>
+                                                    <img src="img/pen-solid (2).svg" alt="">
+                                                </div>
+                                                <div class="between">
+                                                    <h2>Received</h2>
+                                                    <span>4:58pm</span>
+                                                </div>
+                                                <div class="between">
+                                                    <h2>Total</h2>
+                                                    <span>Total</span>
+                                                </div>
+                                                <div class="between">
+                                                    <h2>Payment Method</h2>
+                                                    <span>Visa</span>
+                                                </div>
+                                                <div class="between">
+                                                    <h2>Status</h2>
+                                                    <span class="green">Ready</span>
+                                                </div>
+                                                <div class="between-1">
+                                                    <div class="print-1">
+                                                        <div class="print-icon">
+                                                            <span>Ready</span>
+                                                        </div>
+                                                    </div>
+                                                    <a href="#!" data-toggle="modal" data-target="#myModal-1"><img src="img/eye-solid.svg" alt=""> Details</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-4 filterDiv Table4 Table7">
+                                            <div class="table-div">
+                                                <h1>Receipt #26328193</h1>
+                                                <div class="border-bottom-1"></div>
+                                                <div class="between">
+                                                    <h2>table 7</h2>
+                                                    <img src="img/pen-solid (2).svg" alt="">
+                                                </div>
+                                                <div class="between">
+                                                    <h2>Received</h2>
+                                                    <span>4:58pm</span>
+                                                </div>
+                                                <div class="between">
+                                                    <h2>Total</h2>
+                                                    <span>Total</span>
+                                                </div>
+                                                <div class="between">
+                                                    <h2>Payment Method</h2>
+                                                    <span>Visa</span>
+                                                </div>
+                                                <div class="between">
+                                                    <h2>Status</h2>
+                                                    <span class="green">Ready</span>
+                                                </div>
+                                                <div class="between-1">
+                                                    <div class="print-1">
+                                                        <div class="print-icon">
+                                                            <span>Ready</span>
+                                                        </div>
+                                                    </div>
+                                                    <a href="#!"><img src="img/eye-solid.svg" alt=""> Details</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-4 filterDiv Table4 Table5">
+                                            <div class="table-div">
+                                                <h1>Receipt #26328193</h1>
+                                                <div class="border-bottom-1"></div>
+                                                <div class="between">
+                                                    <h2>table 7</h2>
+                                                    <img src="img/pen-solid (2).svg" alt="">
+                                                </div>
+                                                <div class="between">
+                                                    <h2>Received</h2>
+                                                    <span>4:58pm</span>
+                                                </div>
+                                                <div class="between">
+                                                    <h2>Total</h2>
+                                                    <span>Total</span>
+                                                </div>
+                                                <div class="between">
+                                                    <h2>Payment Method</h2>
+                                                    <span>Visa</span>
+                                                </div>
+                                                <div class="between">
+                                                    <h2>Status</h2>
+                                                    <span class="green">Ready</span>
+                                                </div>
+                                                <div class="between-1">
+                                                    <div class="print-1">
+                                                        <div class="print-icon">
+                                                            <span>Ready</span>
+                                                        </div>
+                                                    </div>
+                                                    <a href="#!"><img src="img/eye-solid.svg" alt=""> Details</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-4 filterDiv Table1 Table6">
+                                            <div class="table-div">
+                                                <h1>Receipt #26328193</h1>
+                                                <div class="border-bottom-1"></div>
+                                                <div class="between">
+                                                    <h2>table 7</h2>
+                                                    <img src="img/pen-solid (2).svg" alt="">
+                                                </div>
+                                                <div class="between">
+                                                    <h2>Received</h2>
+                                                    <span>4:58pm</span>
+                                                </div>
+                                                <div class="between">
+                                                    <h2>Total</h2>
+                                                    <span>Total</span>
+                                                </div>
+                                                <div class="between">
+                                                    <h2>Payment Method</h2>
+                                                    <span>Visa</span>
+                                                </div>
+                                                <div class="between">
+                                                    <h2>Status</h2>
+                                                    <span class="green">Ready</span>
+                                                </div>
+                                                <div class="between-1">
+                                                    <div class="print-1">
+                                                        <div class="print-icon">
+                                                            <span>Ready</span>
+                                                        </div>
+                                                    </div>
+                                                    <a href="#!"><img src="img/eye-solid.svg" alt=""> Details</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-4 filterDiv Table1 Table1">
+                                            <div class="table-div">
+                                                <h1>Receipt #26328193</h1>
+                                                <div class="border-bottom-1"></div>
+                                                <div class="between">
+                                                    <h2>table 7</h2>
+                                                    <img src="img/pen-solid (2).svg" alt="">
+                                                </div>
+                                                <div class="between">
+                                                    <h2>Received</h2>
+                                                    <span>4:58pm</span>
+                                                </div>
+                                                <div class="between">
+                                                    <h2>Total</h2>
+                                                    <span>Total</span>
+                                                </div>
+                                                <div class="between">
+                                                    <h2>Payment Method</h2>
+                                                    <span>Visa</span>
+                                                </div>
+                                                <div class="between">
+                                                    <h2>Status</h2>
+                                                    <span class="orange">Cooking</span>
+                                                </div>
+                                                <div class="between-2">
+                                                    <a href="#!"><img src="img/eye-solid.svg" alt=""> Details</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-4 filterDiv Table4 Table6 Table9">
+                                            <div class="table-div">
+                                                <h1>Receipt #26328193</h1>
+                                                <div class="border-bottom-1"></div>
+                                                <div class="between">
+                                                    <h2>table 7</h2>
+                                                    <img src="img/pen-solid (2).svg" alt="">
+                                                </div>
+                                                <div class="between">
+                                                    <h2>Received</h2>
+                                                    <span>4:58pm</span>
+                                                </div>
+                                                <div class="between">
+                                                    <h2>Total</h2>
+                                                    <span>Total</span>
+                                                </div>
+                                                <div class="between">
+                                                    <h2>Payment Method</h2>
+                                                    <span>Visa</span>
+                                                </div>
+                                                <div class="between">
+                                                    <h2>Status</h2>
+                                                    <span class="orange">Cooking</span>
+                                                </div>
+                                                <div class="between-2">
+                                                    <a href="#!"><img src="img/eye-solid.svg" alt=""> Details</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-4 filterDiv Table4 Table1">
+                                            <div class="table-div">
+                                                <h1>Receipt #26328193</h1>
+                                                <div class="border-bottom-1"></div>
+                                                <div class="between">
+                                                    <h2>table 7</h2>
+                                                    <img src="img/pen-solid (2).svg" alt="">
+                                                </div>
+                                                <div class="between">
+                                                    <h2>Received</h2>
+                                                    <span>4:58pm</span>
+                                                </div>
+                                                <div class="between">
+                                                    <h2>Total</h2>
+                                                    <span>Total</span>
+                                                </div>
+                                                <div class="between">
+                                                    <h2>Payment Method</h2>
+                                                    <span>Visa</span>
+                                                </div>
+                                                <div class="between">
+                                                    <h2>Status</h2>
+                                                    <span class="orange">Cooking</span>
+                                                </div>
+                                                <div class="between-2">
+                                                    <a href="#!"><img src="img/eye-solid.svg" alt=""> Details</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-4 filterDiv Table1 Table6">
+                                            <div class="table-div">
+                                                <h1>Receipt #26328193</h1>
+                                                <div class="border-bottom-1"></div>
+                                                <div class="between">
+                                                    <h2>table 7</h2>
+                                                    <img src="img/pen-solid (2).svg" alt="">
+                                                </div>
+                                                <div class="between">
+                                                    <h2>Received</h2>
+                                                    <span>4:58pm</span>
+                                                </div>
+                                                <div class="between">
+                                                    <h2>Total</h2>
+                                                    <span>Total</span>
+                                                </div>
+                                                <div class="between">
+                                                    <h2>Payment Method</h2>
+                                                    <span>Visa</span>
+                                                </div>
+                                                <div class="between">
+                                                    <h2>Status</h2>
+                                                    <span class="orange">Cooking</span>
+                                                </div>
+                                                <div class="between-2">
+                                                    <a href="#!"><img src="img/eye-solid.svg" alt=""> Details</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-4 filterDiv Table4 Table7">
+                                            <div class="table-div">
+                                                <div class="between">
+                                                    <h1>Receipt #26328193</h1>
+                                                    <img src="img/trash-alt-solid (2).svg" alt="">
+                                                </div>
+                                                <div class="border-bottom-1"></div>
+                                                <div class="between">
+                                                    <h2>table 7</h2>
+                                                    <img src="img/pen-solid (2).svg" alt="">
+                                                </div>
+                                                <div class="between">
+                                                    <h2>Received</h2>
+                                                    <span>4:58pm</span>
+                                                </div>
+                                                <div class="between">
+                                                    <h2>Total</h2>
+                                                    <span>Total</span>
+                                                </div>
+                                                <div class="between">
+                                                    <h2>Payment Method</h2>
+                                                    <span>Visa</span>
+                                                </div>
+                                                <div class="between">
+                                                    <h2>Status</h2>
+                                                    <span class="ree">Watting</span>
+                                                </div>
+                                                <div class="between-2">
+                                                    <a href="#!"><img src="img/eye-solid.svg" alt=""> Details</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-4 filterDiv Table4 Table6">
+                                            <div class="table-div">
+                                                <div class="between">
+                                                    <h1>Receipt #26328193</h1>
+                                                    <img src="img/trash-alt-solid (2).svg" alt="">
+                                                </div>
+                                                <div class="border-bottom-1"></div>
+                                                <div class="between">
+                                                    <h2>table 7</h2>
+                                                    <img src="img/pen-solid (2).svg" alt="">
+                                                </div>
+                                                <div class="between">
+                                                    <h2>Received</h2>
+                                                    <span>4:58pm</span>
+                                                </div>
+                                                <div class="between">
+                                                    <h2>Total</h2>
+                                                    <span>Total</span>
+                                                </div>
+                                                <div class="between">
+                                                    <h2>Payment Method</h2>
+                                                    <span>Visa</span>
+                                                </div>
+                                                <div class="between">
+                                                    <h2>Status</h2>
+                                                    <span class="ree">Watting</span>
+                                                </div>
+                                                <div class="between-2">
+                                                    <a href="#!"><img src="img/eye-solid.svg" alt=""> Details</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-4 filterDiv Table4 Table5">
+                                            <div class="table-div">
+                                                <div class="between">
+                                                    <h1>Receipt #26328193</h1>
+                                                    <img src="img/trash-alt-solid (2).svg" alt="">
+                                                </div>
+                                                <div class="border-bottom-1"></div>
+                                                <div class="between">
+                                                    <h2>table 7</h2>
+                                                    <img src="img/pen-solid (2).svg" alt="">
+                                                </div>
+                                                <div class="between">
+                                                    <h2>Received</h2>
+                                                    <span>4:58pm</span>
+                                                </div>
+                                                <div class="between">
+                                                    <h2>Total</h2>
+                                                    <span>Total</span>
+                                                </div>
+                                                <div class="between">
+                                                    <h2>Payment Method</h2>
+                                                    <span>Visa</span>
+                                                </div>
+                                                <div class="between">
+                                                    <h2>Status</h2>
+                                                    <span class="ree">Watting</span>
+                                                </div>
+                                                <div class="between-2">
+                                                    <a href="#!"><img src="img/eye-solid.svg" alt=""> Details</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-4 filterDiv Table4 Table8">
+                                            <div class="table-div">
+                                                <div class="between">
+                                                    <h1>Receipt #26328193</h1>
+                                                    <img src="img/trash-alt-solid (2).svg" alt="">
+                                                </div>
+                                                <div class="border-bottom-1"></div>
+                                                <div class="between">
+                                                    <h2>table 7</h2>
+                                                    <img src="img/pen-solid (2).svg" alt="">
+                                                </div>
+                                                <div class="between">
+                                                    <h2>Received</h2>
+                                                    <span>4:58pm</span>
+                                                </div>
+                                                <div class="between">
+                                                    <h2>Total</h2>
+                                                    <span>Total</span>
+                                                </div>
+                                                <div class="between">
+                                                    <h2>Payment Method</h2>
+                                                    <span>Visa</span>
+                                                </div>
+                                                <div class="between">
+                                                    <h2>Status</h2>
+                                                    <span class="ree">Watting</span>
+                                                </div>
+                                                <div class="between-2">
+                                                    <a href="#!"><img src="img/eye-solid.svg" alt=""> Details</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cv" style="display: none">
+                <div class="apply">
+                    <div class="cv-fixed">
+                        <a href="#!" class="arrow"><img src="img/go-back-left-arrow.svg" alt=""></a>
+                        <h1>Notifications</h1>
+                        <input type="text" id="search" name="search" placeholder="Search">
+                    </div>
+                    <div class="cv-div">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="between">
+                                        <h1><span> Cras eu elit congue</span>, placerat dui ut, tincidunt nisl. Nulla leo elit, <span>pharetra</span></h1>
+                                        <h2>25/12/1976</h2>
+                                    </div>
+                                </div>
+                                <div class="border"></div>
+                                <div class="col-lg-12">
+                                    <div class="between">
+                                        <h1><span>Cras gravida</span> bibendum dolor eu varius. Morbi fermentum velit nisl, eget <span>vehicula lorem</span></h1>
+                                        <h2>25/12/1976</h2>
+                                    </div>
+                                </div>
+                                <div class="border"></div>
+                                <div class="col-lg-12">
+                                    <div class="between">
+                                        <h1><span>In at iaculis lorem.</span> Praesent tempor dictum tellus ut molestie. Sed sed <span>ullamcorper lorem.</span></h1>
+                                        <h2>25/12/1976</h2>
+                                    </div>
+                                </div>
+                                <div class="border"></div>
+                                <div class="col-lg-12">
+                                    <div class="between">
+                                        <h1><span> Cras eu elit congue</span>, placerat dui ut, tincidunt nisl. Nulla leo elit, <span>pharetra</span></h1>
+                                        <h2>25/12/1976</h2>
+                                    </div>
+                                </div>
+                                <div class="border"></div>
+                                <div class="col-lg-12">
+                                    <div class="between">
+                                        <h1><span>Cras gravida</span> bibendum dolor eu varius. Morbi fermentum velit nisl, eget <span>vehicula lorem</span></h1>
+                                        <h2>25/12/1976</h2>
+                                    </div>
+                                </div>
+                                <div class="border"></div>
+                                <div class="col-lg-12">
+                                    <div class="between">
+                                        <h1><span>In at iaculis lorem.</span> Praesent tempor dictum tellus ut molestie. Sed sed <span>ullamcorper lorem.</span></h1>
+                                        <h2>25/12/1976</h2>
+                                    </div>
+                                </div>
+                                <div class="border"></div>
+                                <div class="col-lg-12">
+                                    <div class="between">
+                                        <h1><span> Cras eu elit congue</span>, placerat dui ut, tincidunt nisl. Nulla leo elit, <span>pharetra</span></h1>
+                                        <h2>25/12/1976</h2>
+                                    </div>
+                                </div>
+                                <div class="border"></div>
+                                <div class="col-lg-12">
+                                    <div class="between">
+                                        <h1><span>Cras gravida</span> bibendum dolor eu varius. Morbi fermentum velit nisl, eget <span>vehicula lorem</span></h1>
+                                        <h2>25/12/1976</h2>
+                                    </div>
+                                </div>
+                                <div class="border"></div>
+                                <div class="col-lg-12">
+                                    <div class="between">
+                                        <h1><span>In at iaculis lorem.</span> Praesent tempor dictum tellus ut molestie. Sed sed <span>ullamcorper lorem.</span></h1>
+                                        <h2>25/12/1976</h2>
+                                    </div>
+                                </div>
+                                <div class="border"></div>
+                                <div class="col-lg-12">
+                                    <div class="between">
+                                        <h1><span>In at iaculis lorem.</span> Praesent tempor dictum tellus ut molestie. Sed sed <span>ullamcorper lorem.</span></h1>
+                                        <h2>25/12/1976</h2>
+                                    </div>
+                                </div>
+                                <div class="border"></div>
+                                <div class="col-lg-12">
+                                    <div class="between">
+                                        <h1><span> Cras eu elit congue</span>, placerat dui ut, tincidunt nisl. Nulla leo elit, <span>pharetra</span></h1>
+                                        <h2>25/12/1976</h2>
+                                    </div>
+                                </div>
+                                <div class="border"></div>
+                                <div class="col-lg-12">
+                                    <div class="between">
+                                        <h1><span>Cras gravida</span> bibendum dolor eu varius. Morbi fermentum velit nisl, eget <span>vehicula lorem</span></h1>
+                                        <h2>25/12/1976</h2>
+                                    </div>
+                                </div>
+                                <div class="border"></div>
+                                <div class="col-lg-12">
+                                    <div class="between">
+                                        <h1><span>In at iaculis lorem.</span> Praesent tempor dictum tellus ut molestie. Sed sed <span>ullamcorper lorem.</span></h1>
+                                        <h2>25/12/1976</h2>
+                                    </div>
+                                </div>
+                                <div class="border"></div>
+                                <div class="col-lg-12">
+                                    <div class="between">
+                                        <h1><span> Cras eu elit congue</span>, placerat dui ut, tincidunt nisl. Nulla leo elit, <span>pharetra</span></h1>
+                                        <h2>25/12/1976</h2>
+                                    </div>
+                                </div>
+                                <div class="border"></div>
+                                <div class="col-lg-12">
+                                    <div class="between">
+                                        <h1><span>Cras gravida</span> bibendum dolor eu varius. Morbi fermentum velit nisl, eget <span>vehicula lorem</span></h1>
+                                        <h2>25/12/1976</h2>
+                                    </div>
+                                </div>
+                                <div class="border"></div>
+                                <div class="col-lg-12">
+                                    <div class="between">
+                                        <h1><span>In at iaculis lorem.</span> Praesent tempor dictum tellus ut molestie. Sed sed <span>ullamcorper lorem.</span></h1>
+                                        <h2>25/12/1976</h2>
+                                    </div>
+                                </div>
+                                <div class="border"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    <!-- Modal content-->
+        <div class="modal-content model-width">
+            <div class="modal-header">
+                <h1>End Shift</h1>
+                <a href="#!" data-dismiss="modal"><img src="img/times-circle-solid (1).svg" alt=""></a>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12 d-flex" style="padding: 0;">
+                        <div class="col-md-6">
+                            <div class="input d-flex">
+                                <a href="#!" class=" d-flex"><span><div style="height: 30px;
+                                    width: 2px; background-color: #C8C8C8;position: relative;
+                                    top: 0.4rem;left: 2rem"></div> <img src="img/calendar-alt-solid (1).svg" style="position: relative; bottom: 1.7rem; margin-left: .5rem;"></span> </span></a>
+                                    <input type="text" placeholder="Purchasing Date" style="border: none !important;">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="input d-flex">
+                                <a href="#!" class=" d-flex"><span><div style="height: 30px;
+                                    width: 2px; background-color: #C8C8C8;position: relative;
+                                    top: 0.4rem;left: 2rem"></div> <img src="img/calendar-alt-solid (1).svg" style="position: relative; bottom: 1.7rem; margin-left: .5rem;"></span> </span></a>
+                                    <input type="text" placeholder="Purchasing Date" style="border: none !important;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12"><h1>Other expenses</h1></div>
+                    <div class="col-md-12"><p>If you have other expenses that needs to be added please add the exact number</p></div>
+                    <div class="col-md-12 d-flex" style="padding: 0;">
+                        <div class="col-md-6"><input type="text" placeholder="Expeneses"></div>
+                    </div>
+                    <div class="col-md-12 color-a">
+                        <a href="#!" class="add-a">Save</a>
+                        <a href="#!" data-dismiss="modal">Cancel</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="myModal-1" role="dialog">
+    <div class="modal-dialog modal-dialog-1">
+    <!-- Modal content-->
+        <div class="modal-content model-width-1">
+            <div class="modal-header">
+                <h1>Details</h1>
+                <a href="#!" data-dismiss="modal"><img src="img/times-circle-solid (1).svg" alt=""></a>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-12 d-flex">
+                        <div class="col-lg-6">
+                            <div class="Details">
+                                <div class="between">
+                                    <h2>Received</h2>
+                                    <span>8:40 am</span>
+                                </div>
+                                <div class="between">
+                                    <h2>Approved</h2>
+                                    <span>8:45 am</span>
+                                </div>
+                                <div class="between">
+                                    <h2>Delivered</h2>
+                                    <span>9:40 am</span>
+                                </div>
+                                <div class="between">
+                                    <h2>Received</h2>
+                                    <span>9:10 am</span>
+                                </div>
+                                <div class="border-bottom-2"></div>
+                                <div class="between">
+                                    <h2>subtotal</h2>
+                                    <span class="color-grey">$100</span>
+                                </div>
+                                <div class="between">
+                                    <h2>VAT</h2>
+                                    <span class="color-grey">$10</span>
+                                </div>
+                                <div class="between">
+                                    <h2>service</h2>
+                                    <span class="color-grey">$5</span>
+                                </div>
+                                <div class="border-bottom-1"></div>
+                                <div class="between">
+                                    <h2>total</h2>
+                                    <span class="color-grey">$115</span>
+                                </div>
+                                <div class="between">
+                                    <h2>Payment Method</h2>
+                                    <span class="color-grey">Visa</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="item">
+                                <div class="col-lg-12"><h1>Item</h1></div>
+                                <div class="col-lg-12 item-div d-flex" style="padding-left: 0;">
+                                    <div class="col-lg-2"><h3>x2</h3></div>
+                                    <div class="col-lg-10" style="padding-left: 0;">
+                                        <div class="between">
+                                            <div>
+                                                <h1>Strawberry cubcake</h1>
+                                                <span>Original</span>
+                                                <span> X1 Cola</span>
+                                            </div>
+                                            <h5>$40</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 item-div color-red d-flex" style="padding-left: 0;">
+                                    <div class="col-lg-2"><h3>x2</h3></div>
+                                    <div class="col-lg-10" style="padding-left: 0;">
+                                        <div class="between">
+                                            <div>
+                                                <h1>Strawberry cubcake <span>(Deleted)</span></h1>
+                                                <span>Original</span>
+                                                <span> X1 Cola</span>
+                                            </div>
+                                            <h5>$40</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 item-div d-flex" style="padding-left: 0;">
+                                    <div class="col-lg-2"><h3>x2</h3></div>
+                                    <div class="col-lg-10" style="padding-left: 0;">
+                                        <div class="between">
+                                            <div>
+                                                <h1>Strawberry cubcake<span>(Edit)</span></h1>
+                                                <span>Original</span>
+                                                <span> X1 Cola</span>
+                                            </div>
+                                            <h5>$40</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 item-div d-flex" style="padding-left: 0;">
+                                    <div class="col-lg-2"><h3>x2</h3></div>
+                                    <div class="col-lg-10" style="padding-left: 0;">
+                                        <div class="between">
+                                            <div>
+                                                <h1>Strawberry cubcake</h1>
+                                                <span>Original</span>
+                                                <span> X1 Cola</span>
+                                            </div>
+                                            <h5>$40</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 add-anthor d-flex">
+                        <div class="col-lg-6"></div>
+                        <div class="col-lg-6"><a href="#!" data-dismiss="modal" data-toggle="modal" data-target="#myModal-2">+ Add Others</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="myModal-2" role="dialog">
+    <div class="modal-dialog">
+    <!-- Modal content-->
+        <div class="modal-content model-width">
+            <div class="modal-header">
+                <h1>Add Others</h1>
+                <a href="#!" data-dismiss="modal"><img src="img/times-circle-solid (1).svg" alt=""></a>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-12 d-flex" style="padding: 0;">
+                        <div class="col-lg-8"><input type="text" placeholder="Name"></div>
+                        <div class="col-lg-4">
+                            <div class="input d-flex">
+                                <input type="text" placeholder="Purchasing Date" style="border: none !important;">
+                                <a href="#!" class=" d-flex"><span><div style="height: 30px;
+                                    width: 2px; background-color: #C8C8C8;position: relative;
+                                    top: 0.4rem;right: 0.4rem;"></div> <img src="img/calendar-alt-solid (1).svg" style="position: relative; bottom: 1.7rem; margin-left: .5rem;"></span> </span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 color-a">
+                        <a href="#!" class="add-a">Save</a>
+                        <a href="#!" data-dismiss="modal">Cancel</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="js/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_3949" data-name="Rectangle 3949" width="24" height="24" transform="translate(-10346 7081)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="burger-menu" transform="translate(10346 -7081)" clip-path="url(#clip-path)">
+    <path id="bars-solid" d="M.567,62.551H15.308a.567.567,0,0,0,.567-.567V60.567A.567.567,0,0,0,15.308,60H.567A.567.567,0,0,0,0,60.567v1.417A.567.567,0,0,0,.567,62.551Zm0,5.67H15.308a.567.567,0,0,0,.567-.567V66.237a.567.567,0,0,0-.567-.567H.567A.567.567,0,0,0,0,66.237v1.417A.567.567,0,0,0,.567,68.221Zm0,5.67H15.308a.567.567,0,0,0,.567-.567V71.906a.567.567,0,0,0-.567-.567H.567A.567.567,0,0,0,0,71.906v1.417A.567.567,0,0,0,.567,73.891Z" transform="translate(-10342 7026)"/>
+  </g>
+</svg>

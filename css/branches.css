@@ -1,0 +1,200 @@
+body {
+    background-color: #f8f8fa;
+}
+
+.sidenav h2 {
+    font-size: 16px;
+    margin-top: .5rem;
+    margin-left: 5px;
+}
+
+.sidenav a {
+    color: #000;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    margin-top: 5rem;
+    /* padding: .8rem; */
+}
+
+.sidenav a img {
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+.sidenav h1 {
+    font-size: 12px;
+    color: #9B9B9B;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.side-nav-img.active {
+    color: #A20A0A;
+    border-left: 4px solid #A20A0A;
+}
+
+.side-nav-img.active h2 {
+    font-weight: bold;
+}
+
+nav {
+    background-color: #fff;
+    box-shadow: #00000029 0px 0px 5px;
+    /* position: fixed; */
+    /* width: 102%; */
+    /* margin-right: 1%; */
+    /* width: calc(100vw - 242px); */
+    z-index: 10;
+    padding: .4rem;
+}
+
+.div {
+    justify-content: space-between;
+}
+
+nav h1 {
+    font-size: 14px;
+    font-weight: bold;
+    color: #000;
+    line-height: 2;
+    margin-top: .5rem;
+    margin-left: 1rem;
+}
+
+nav img {
+    width: 42px;
+    height: 42px;
+    margin-right: 1rem;
+    margin-top: .1rem;
+}
+
+nav .cctv {
+  height: 24px;
+  width: 24px;
+  margin: 0;
+  margin-top: .7rem;
+  margin-right: 1rem;
+}
+
+nav i {
+    line-height: 3 !important;
+    margin-left: 1rem;
+    color: #191919;
+}
+
+/* end nav */
+
+.header {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    height: 80vh;
+}
+
+.header img {
+    width: 165px;
+    align-self: center;
+    margin-bottom: 1.5rem;
+}
+
+.header h1 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.header p {
+    font-size: 12px;
+    color: #858585;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.header a {
+    padding: .5rem;
+    /* padding-left: 2.5rem; */
+    /* padding-right: 2.5rem; */
+    text-decoration: none;
+    color: #FFF;
+    background-color: #000;
+    text-align: center;
+    border-radius: 3px;
+    width: 20%;
+    align-self: center;
+}
+
+
+.modal .modal-header {
+    border-bottom: none;
+}
+
+.modal .modal-header h1 {
+    font-size: 14px;
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.model-width {
+    width: 730px;
+}
+
+
+.modal-dialog {
+    margin-left: 30vw;
+    margin-top: 10rem;
+}
+
+
+.modal input {
+    padding: 1rem !important;
+    padding-top: .5rem !important;
+    padding-bottom: .5rem !important;
+    width: 100% !important;
+    margin-bottom: 1.7rem !important;
+    border: 1px solid #C8C8C8 !important; 
+}
+
+
+.custom-select {
+  box-sizing: border-box;
+  color: #858585;
+  border: 1px solid #C8C8C8;
+  margin-bottom: 1.7rem;
+  box-shadow: #00000014 0px 0px 5px;
+  background-image: url(../img/chevron-down-solid.svg);
+  padding: 0.55rem 1rem;
+  width: 100%;
+  height: auto;
+  outline: none;
+  font-size: 14px;
+}
+
+
+
+.color-a {
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+
+.color-a a {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+
+.color-a .add-a {
+    color: #FFF;
+    background-color: #000;
+    padding: .7rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    margin-right: 2rem;
+    margin-top: 2rem;
+}
+
+
+

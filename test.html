@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Color picker for jQuery</title>
+  <meta name="description" content="A very simple jQuery color picker plugin">
+
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.css">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css">
+  <!-- <link rel="stylesheet" href="jquery.simplecolorpicker.css">
+  <link rel="stylesheet" href="jquery.simplecolorpicker-regularfont.css">
+  <link rel="stylesheet" href="jquery.simplecolorpicker-glyphicons.css">
+  <link rel="stylesheet" href="jquery.simplecolorpicker-fontawesome.css"> -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/duotone.css" integrity="sha384-R3QzTxyukP03CMqKFe0ssp5wUvBPEyy9ZspCB+Y01fEjhMwcXixTyeot+S40+AjZ" crossorigin="anonymous"/> -->
+    <!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/fontawesome.css" integrity="sha384-eHoocPgXsiuZh+Yy6+7DsKAerLXyJmu2Hadh4QYyt+8v86geixVYwFqUvMU8X90l" crossorigin="anonymous"/> -->
+    <link rel="stylesheet" href="css/TEST.css">
+    <link rel="stylesheet" href="css/utilty.css">
+</head>
+
+<body>
+
+<!-- Button to init the jQuery plugin -->
+<!-- <button id="init" class="">Init the jQuery plugin</button> -->
+
+<!-- Button to destroy the jQuery plugin -->
+<!-- <button id="destroy" class="btn btn-danger">Destroy the jQuery plugin</button> -->
+
+<!-- <h3>Option selected</h3>
+colorpicker-option-selected:
+<select name="colorpicker-option-selected">
+  <option value="#7bd148">Green</option>
+  <option value="#5484ed">Bold blue</option>
+  <option value="#a4bdfc" selected>Blue</option>
+  <option value="#46d6db">Turquoise</option>
+  <option value="#7ae7bf">Light green</option>
+  <option value="#51b749">Bold green</option>
+  <option value="#fbd75b">Yellow</option>
+  <option value="#ffb878">Orange</option>
+  <option value="#ff887c" selected>Red</option>
+  <option value="#dc2127">Bold red</option>
+  <option value="#dbadff">Purple</option>
+  <option value="#e1e1e1">Gray</option>
+  <option value="#000000">black</option>
+  <option value="#ff0000"></option>
+  <option value="#0000ff"></option>
+  <option value="#00ff00"></option>
+  <option value="#a55db6"></option>
+  <option value="#203694"></option>
+  <option value="#215978"></option>
+  <option value="#fdsbg2"></option>
+  <option value="#3y9x5s"></option>
+  <option value="#gpwmkv"></option>
+  <option value="#g9x9vr"></option>
+  <option value="#dxv36s"></option>
+</select> -->
+<!-- 
+<h3>Change background color</h3>
+colorpicker-change-background-color:
+<select name="colorpicker-change-background-color">
+  <option value="#7bd148">Green</option>
+  <option value="#5484ed">Bold blue</option>
+  <option value="#a4bdfc">Blue</option>
+  <option value="#46d6db">Turquoise</option>
+  <option value="#7ae7bf">Light green</option>
+  <option value="#51b749">Bold green</option>
+  <option value="#fbd75b">Yellow</option>
+  <option value="#ffb878">Orange</option>
+  <option value="#ff887c">Red</option>
+  <option value="#dc2127">Bold red</option>
+  <option value="#dbadff">Purple</option>
+  <option value="#e1e1e1">Gray</option>
+</select> -->
+<!-- 
+<div id="chartContainer"></div>
+
+<script>
+window.onload = function () {
+	var chart = new CanvasJS.Chart("chartContainer", {
+	title:{
+		text: "Weekly Revenue Analysis for First Quarter"
+	},
+	axisY:[{
+		title: "Order",
+		lineColor: "#C24642",
+		tickColor: "#C24642",
+		labelFontColor: "#C24642",
+		titleFontColor: "#C24642",
+		includeZero: true,
+		suffix: "k"
+	},
+	{
+		title: "Footfall",
+		lineColor: "#369EAD",
+		tickColor: "#369EAD",
+		labelFontColor: "#369EAD",
+		titleFontColor: "#369EAD",
+		includeZero: true,
+		suffix: "k"
+	}],
+	axisY2: {
+		title: "Revenue",
+		lineColor: "#7F6084",
+		tickColor: "#7F6084",
+		labelFontColor: "#7F6084",
+		titleFontColor: "#7F6084",
+		includeZero: true,
+		prefix: "$",
+		suffix: "k"
+	},
+	toolTip: {
+		shared: true
+	},
+	legend: {
+		cursor: "pointer",
+		itemclick: toggleDataSeries
+	},
+	data: [{
+		type: "line",
+		name: "Footfall",
+		color: "#369EAD",
+		showInLegend: true,
+		axisYIndex: 1,
+		dataPoints: [
+			{ x: new Date(2017, 00, 7), y: 85.4 }, 
+			{ x: new Date(2017, 00, 14), y: 92.7 },
+			{ x: new Date(2017, 00, 21), y: 64.9 },
+			{ x: new Date(2017, 00, 28), y: 58.0 },
+			{ x: new Date(2017, 01, 4), y: 63.4 },
+			{ x: new Date(2017, 01, 11), y: 69.9 },
+			{ x: new Date(2017, 01, 18), y: 88.9 },
+			{ x: new Date(2017, 01, 25), y: 66.3 },
+			{ x: new Date(2017, 02, 4), y: 82.7 },
+			{ x: new Date(2017, 02, 11), y: 60.2 },
+			{ x: new Date(2017, 02, 18), y: 87.3 },
+			{ x: new Date(2017, 02, 25), y: 98.5 }
+		]
+	},
+	{
+		type: "line",
+		name: "Order",
+		color: "#C24642",
+		axisYIndex: 0,
+		showInLegend: true,
+		dataPoints: [
+			{ x: new Date(2017, 00, 7), y: 32.3 }, 
+			{ x: new Date(2017, 00, 14), y: 33.9 },
+			{ x: new Date(2017, 00, 21), y: 26.0 },
+			{ x: new Date(2017, 00, 28), y: 15.8 },
+			{ x: new Date(2017, 01, 4), y: 18.6 },
+			{ x: new Date(2017, 01, 11), y: 34.6 },
+			{ x: new Date(2017, 01, 18), y: 37.7 },
+			{ x: new Date(2017, 01, 25), y: 24.7 },
+			{ x: new Date(2017, 02, 4), y: 35.9 },
+			{ x: new Date(2017, 02, 11), y: 12.8 },
+			{ x: new Date(2017, 02, 18), y: 38.1 },
+			{ x: new Date(2017, 02, 25), y: 42.4 }
+		]
+	},
+	{
+		type: "line",
+		name: "Revenue",
+		color: "#7F6084",
+		axisYType: "secondary",
+		showInLegend: true,
+		dataPoints: [
+			{ x: new Date(2017, 00, 7), y: 42.5 }, 
+			{ x: new Date(2017, 00, 14), y: 44.3 },
+			{ x: new Date(2017, 00, 21), y: 28.7 },
+			{ x: new Date(2017, 00, 28), y: 22.5 },
+			{ x: new Date(2017, 01, 4), y: 25.6 },
+			{ x: new Date(2017, 01, 11), y: 45.7 },
+			{ x: new Date(2017, 01, 18), y: 54.6 },
+			{ x: new Date(2017, 01, 25), y: 32.0 },
+			{ x: new Date(2017, 02, 4), y: 43.9 },
+			{ x: new Date(2017, 02, 11), y: 26.4 },
+			{ x: new Date(2017, 02, 18), y: 40.3 },
+			{ x: new Date(2017, 02, 25), y: 54.2 }
+		]
+	}]
+});
+chart.render();
+
+function toggleDataSeries(e) {
+	if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+		e.dataSeries.visible = false;
+	} else {
+		e.dataSeries.visible = true;
+	}
+	e.chart.render();
+}
+
+}
+</script> -->
+
+
+<!-- <table class="contact-div">
+	<tr class=" contact-color">
+		<th><h4>Full Name</h4></th>
+		<th><h4>Date</h4></th>
+		<th><h4>Subscription</h4></th>
+		<th><h4>Email</h4></th>
+		<th><h4>Restaurant Name</h4></th>
+		<th><h4>Province</h4></th>
+		<th><h4>City</h4></th>
+		<th><h4>Phone Number</h4></th>
+		<th></th>
+	</tr>
+	<tr class="contact-solved">
+		<td><h5>Anthony Fox</h5></td>
+		<td><h5>16/08/1991</h5></td>
+		<td><h5>Quam lobortis</h5></td>
+		<td><h5>sandra.wagner@mail.com</h5></td>
+		<td><h5>Vulputate laoreet augue</h5></td>
+		<td><h5>Budapest</h5></td>
+		<td><h5>Taipei</h5></td>
+		<td><h5>(213)769-8847</h5></td>
+		<td><a href="#!" data-toggle="modal" data-target="#myModal-5"><img src="img/envelope-solid.svg" alt=""></a></td>
+	</tr>
+	<tr class="contact-solved">
+		<td><h5>Anthony Fox</h5></td>
+		<td><h5>16/08/1991</h5></td>
+		<td><h5>Quam lobortis</h5></td>
+		<td><h5>sandra.wagner@mail.com</h5></td>
+		<td><h5>Vulputate laoreet augue</h5></td>
+		<td><h5>Budapest</h5></td>
+		<td><h5>Taipei</h5></td>
+		<td><h5>(213)769-8847</h5></td>
+		<td><a href="#!" data-toggle="modal" data-target="#myModal-5"><img src="img/envelope-solid.svg" alt=""></a></td>
+	</tr>
+	<tr class="contact-solved">
+	<td><h5>Anthony Fox</h5></td>
+	<td><h5>16/08/1991</h5></td>
+	<td><h5>Quam lobortis</h5></td>
+	<td><h5>sandra.wagner@mail.com</h5></td>
+	<td><h5>Vulputate laoreet augue</h5></td>
+	<td><h5>Budapest</h5></td>
+	<td><h5>Taipei</h5></td>
+	<td><h5>(213)769-8847</h5></td>
+	<td><a href="#!" data-toggle="modal" data-target="#myModal-5"><img src="img/envelope-solid.svg" alt=""></a></td>
+	</tr>
+	<tr class="contact-unsolved">
+		<td><h5>Anthony Fox</h5></td>
+		<td><h5>16/08/1991</h5></td>
+		<td><h5>Quam lobortis</h5></td>
+		<td><h5>sandra.wagner@mail.com</h5></td>
+		<td><h5>Vulputate laoreet augue</h5></td>
+		<td><h5>Budapest</h5></td>
+		<td><h5>Taipei</h5></td>
+		<td><h5>(213)769-8847</h5></td>
+		<td><a href="#!" data-toggle="modal" data-target="#myModal-5"><img src="img/envelope-open-solid.svg" alt=""></a></td>
+	</tr>
+	<tr class="contact-unsolved">
+		<td><h5>Anthony Fox</h5></td>
+		<td><h5>16/08/1991</h5></td>
+		<td><h5>Quam lobortis</h5></td>
+		<td><h5>sandra.wagner@mail.com</h5></td>
+		<td><h5>Vulputate laoreet augue</h5></td>
+		<td><h5>Budapest</h5></td>
+		<td><h5>Taipei</h5></td>
+		<td><h5>(213)769-8847</h5></td>
+		<td><a href="#!" data-toggle="modal" data-target="#myModal-5"><img src="img/envelope-open-solid.svg" alt=""></a></td>
+	</tr>
+	<tr class="contact-unsolved">
+		<td><h5>Anthony Fox</h5></td>
+		<td><h5>16/08/1991</h5></td>
+		<td><h5>Quam lobortis</h5></td>
+		<td><h5>sandra.wagner@mail.com</h5></td>
+		<td><h5>Vulputate laoreet augue</h5></td>
+		<td><h5>Budapest</h5></td>
+		<td><h5>Taipei</h5></td>
+		<td><h5>(213)769-8847</h5></td>
+		<td><a href="#!" data-toggle="modal" data-target="#myModal-5"><img src="img/envelope-open-solid.svg" alt=""></a></td>
+	</tr>
+	<tr class="contact-unsolved">
+		<td><h5>Anthony Fox</h5></td>
+		<td><h5>16/08/1991</h5></td>
+		<td><h5>Quam lobortis</h5></td>
+		<td><h5>sandra.wagner@mail.com</h5></td>
+		<td><h5>Vulputate laoreet augue</h5></td>
+		<td><h5>Budapest</h5></td>
+		<td><h5>Taipei</h5></td>
+		<td><h5>(213)769-8847</h5></td>
+		<td><a href="#!" data-toggle="modal" data-target="#myModal-5"><img src="img/envelope-open-solid.svg" alt=""></a></td>
+	</tr>
+	<tr class="contact-unsolved">
+		<td><h5>Anthony Fox</h5></td>
+		<td><h5>16/08/1991</h5></td>
+		<td><h5>Quam lobortis</h5></td>
+		<td><h5>sandra.wagner@mail.com</h5></td>
+		<td><h5>Vulputate laoreet augue</h5></td>
+		<td><h5>Budapest</h5></td>
+		<td><h5>Taipei</h5></td>
+		<td><h5>(213)769-8847</h5></td>
+		<td><a href="#!" data-toggle="modal" data-target="#myModal-5"><img src="img/envelope-open-solid.svg" alt=""></a></td>
+	</tr>
+	<tr class="contact-unsolved">
+		<td><h5>Anthony Fox</h5></td>
+		<td><h5>16/08/1991</h5></td>
+		<td><h5>Quam lobortis</h5></td>
+		<td><h5>sandra.wagner@mail.com</h5></td>
+		<td><h5>Vulputate laoreet augue</h5></td>
+		<td><h5>Budapest</h5></td>
+		<td><h5>Taipei</h5></td>
+		<td><h5>(213)769-8847</h5></td>
+		<td><a href="#!" data-toggle="modal" data-target="#myModal-5"><img src="img/envelope-open-solid.svg" alt=""></a></td>
+	</tr>
+	<tr class="contact-unsolved">
+		<td><h5>Anthony Fox</h5></td>
+		<td><h5>16/08/1991</h5></td>
+		<td><h5>Quam lobortis</h5></td>
+		<td><h5>sandra.wagner@mail.com</h5></td>
+		<td><h5>Vulputate laoreet augue</h5></td>
+		<td><h5>Budapest</h5></td>
+		<td><h5>Taipei</h5></td>
+		<td><h5>(213)769-8847</h5></td>
+		<td><a href="#!" data-toggle="modal" data-target="#myModal-5"><img src="img/envelope-open-solid.svg" alt=""></a></td>
+	</tr>
+
+</table> -->
+
+
+
+<body>
+
+<p id="test3"></p>
+<div class="row">
+<div class="col-lg-4 col-md-4"><button class="button-pay" id="btn1">1</button></div>
+<div class="col-lg-4 col-md-4"><button class="button-pay" id="btn2">2</button></div>
+<div class="col-lg-4 col-md-4"><button class="button-pay" id="btn3">3</button></div>
+<div class="col-lg-4 col-md-4"><button class="button-pay" id="btn4">4</button></div>
+<div class="col-lg-4 col-md-4"><button class="button-pay" id="btn5">5</button></div>
+<div class="col-lg-4 col-md-4"><button class="button-pay" id="btn6">6</button></div>
+<div class="col-lg-4 col-md-4"><button class="button-pay" id="btn7">7</button></div>
+<div class="col-lg-4 col-md-4"><button class="button-pay" id="btn8">8</button></div>
+<div class="col-lg-4 col-md-4"><button class="button-pay" id="btn9">9</button></div>
+</div>
+<!-- <button id="btn3">8</button> -->
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.js"></script>
+<!-- <script src="jquery.simplecolorpicker.js"></script> -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+<!-- <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script> -->
+
+<script src="js/test.js"></script>
+
+</body>
+</html>

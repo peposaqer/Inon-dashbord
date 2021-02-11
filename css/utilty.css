@@ -1,0 +1,411 @@
+html,
+body {
+    font-family: 'Public Sans', sans-serif;
+    color: #000;
+}
+
+.padding {
+    padding: 0;
+}
+
+a *{
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+/* satrt cv */
+.cv {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2002;
+  width: 35%;
+}
+
+
+.cv .apply {
+  background: #FFF;
+  height: 100%;
+  overflow: auto;
+}
+
+.cv h1 {
+  color: #A20A0A;
+  font-size: 32px;
+  font-weight: bold;
+  padding: 2%;
+  margin-left: 3%;
+}
+
+.cv input {
+    width: 90% !important;
+    margin-left: 5%;
+    padding-bottom: 1rem !important;
+}
+
+.cv .arrow img {
+    margin-left: 5%;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.cv .cv-fixed {
+    position: sticky;
+    background-color: #FFF !important;
+    width: 100%;
+    z-index: 10;
+    top: 0;
+    box-shadow: 0px 3px 6px #0000000A;
+    padding-bottom: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.cv .cv-div h1 {
+    font-size: 14px;
+    color: #000;
+    font-weight: normal;
+    width: 75%;
+}
+
+
+.cv .cv-div h1 span {
+    font-weight: bold;
+}
+
+.cv .cv-div h2 {
+    font-size: 14px;
+    color: #858585;
+    margin-top: 1rem;
+}
+
+
+input {
+    border: 1px solid #D2D2D2;
+    /* margin-bottom: 1.5rem; */
+    width: 60%;
+    border-radius: 3px;
+    padding-top: .7rem;
+    padding-bottom: .7rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    outline: none;
+    color: #000000;
+}
+
+.custom-select  {
+    background-image: url(../img/sort-down-solid.svg) !important;
+}
+
+input::placeholder {
+    color: #858585;
+    font-size: 16px;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+
+#search {
+  border-bottom: 2px solid #000 ;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-radius: 0;
+  font-size: 14px;
+  background-color: white;
+  background-image: url("../img/search-solid.svg");
+  background-position: 15px 15px; 
+  background-repeat: no-repeat;
+  padding: 13px 20px 22px 40px;
+  width: 100%;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  outline: none;
+}
+
+
+.between {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#search::placeholder {
+    font-size: 12px;
+    color: #000;
+    font-weight: 800;
+}
+
+.dropdown {
+    background-color: transparent;
+    outline: transparent;
+    box-shadow: transparent;
+}
+
+.logo-white {
+    margin-left: 2rem;
+}
+
+
+/* start nav */
+.sidenav {
+  height: 100%;
+  width: 242px;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  background-color: #FFF;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+/* 
+.side-bar {
+  width: 242px;
+}
+.restOfScreen {
+    width: calc(100% - 242px);;
+} */
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.w3-main {
+    width: 100%;
+}
+
+.plus {
+    position: fixed;
+    bottom: 2rem;
+    z-index: 20;
+    right: 2rem;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.border-bottom-1 {
+    border: dashed  1px #f6f6f6;
+    width: 96%;
+    margin-left: 2%;
+}
+
+.color-red {
+    color: #F88989;
+}
+
+
+.sidenav .logo {
+    margin-bottom: .5rem;
+    /* margin-left: 10%; */
+}
+
+
+
+.green {
+    color: #83C117 !important;
+}
+
+
+.red {
+    color: #FF5151 !important;
+}
+
+.week {
+    border: 1px solid #000000;
+    border-radius: 3px;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    /* margin-left: 2rem; */
+    /* padding: 1rem; */
+}
+
+.week a {
+    color: #000;
+    border: none !important;
+    border-radius: 0px !important;
+    text-decoration: none;
+    padding: .5rem;
+    padding-left: 1.48rem;
+    padding-right: 1.48rem;
+}
+
+.week a.active,
+.week a:hover {
+    background-color: #000;
+    color: #FFF;
+}
+
+
+.modal input {
+    padding: 1rem !important;
+    padding-top: .5rem !important;
+    padding-bottom: .5rem !important;
+    width: 100% !important;
+    border: 1px solid #C8C8C8 !important; 
+}
+
+.w3-sidebar {
+    z-index: 11;
+}
+
+.w3-bar-block .w3-bar-item {
+    z-index: 12;
+    position: relative;
+    font-size: 30px;
+    background-color: transparent;
+}
+
+.w3-bar-block .w3-bar-item:hover {
+    background-color: transparent;
+}
+
+.button {
+    /* padding: .5rem; */
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 30px;
+    border: none;
+    background-color: #FFF;
+    outline: none;
+}
+
+/* start nav */
+
+.teal {
+    box-shadow: 0px 0px 5px #00000029;
+}
+
+nav {
+    background-color: #fff;
+    box-shadow: none !important;
+    /* position: fixed; */
+    width: 100%;
+    /* width: calc(100vw - 242px); */
+    /* margin-right: 1%; */
+    /* z-index: 10; */
+    padding: .4rem;
+}
+
+.div {
+    justify-content: space-between;
+}
+
+nav h1 {
+    font-size: 14px;
+    font-weight: bold;
+    color: #000;
+    line-height: 2;
+    margin-top: .5rem;
+    margin-left: 1rem;
+}
+/* 
+nav img {
+    width: 42px;
+    height: 42px;
+    margin-right: 1rem;
+    margin-top: .1rem;
+} */
+
+nav .cctv {
+    height: 24px;
+    width: 24px;
+    margin: 0;
+    margin-top: .7rem;
+    margin-right: 1rem;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.tab {
+    overflow: auto;
+}
+
+.modal input[type="checkbox"] {
+    width: auto !important;
+}
+
+.pay {
+    border: none !important;
+    padding: .4rem;
+    padding-left: .6rem;
+    padding-right: .6rem;
+}
+
+
+@media (min-width: 426px) and (max-width: 1024px) {
+
+    .week {
+        position: relative;
+        right: 0rem;
+        width: 38%;
+        /* margin-left: 3rem; */
+    }
+
+
+    .week a {
+        color: #000;
+        border: none !important;
+        text-decoration: none;
+        padding: .3rem;
+        padding-bottom: .6rem;
+        padding-top: .6rem;
+        padding-left: .88rem !important;
+        padding-right: .88rem !important;
+    }
+
+    .tab {
+        width: 25%;
+        display: flex;
+    }
+
+    .modal.show .modal-dialog {
+        margin-left: 2vw;
+        margin-top: 3rem;
+    }
+
+    .model-width {
+        width: 94vw !important;
+    }
+
+    .model-width-1 {
+        width: 90vw !important;
+    }
+
+    .model-width-2 {
+        width: 90vw !important;
+    }
+
+    .none {
+        display: none;
+    }
+
+    .print .print-icon span {
+        display: none;
+    }
+
+    .print .print-icon {
+        padding: .4rem;
+        padding-left: .6rem;
+        padding-right: .6rem;
+    }
+
+    .modal-dialog-5 {
+        margin-left: 33vw !important;
+    }   
+/* 
+    .between a {
+        padding: .4rem;
+    } */
+
+
+}
+

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INON Dashbord</title>
+    <link rel="shortcut icon" type="image/x-icon" href="img/Image20210126153231.png"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/duotone.css" integrity="sha384-R3QzTxyukP03CMqKFe0ssp5wUvBPEyy9ZspCB+Y01fEjhMwcXixTyeot+S40+AjZ" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/fontawesome.css" integrity="sha384-eHoocPgXsiuZh+Yy6+7DsKAerLXyJmu2Hadh4QYyt+8v86geixVYwFqUvMU8X90l" crossorigin="anonymous"/>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/utilty.css">
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="w3-sidebar w3-bar-block w3-collapse w3-animate-left" style="width:242px;" id="mySidebar">
+                <div class="side-bar">
+                    <div class="container-fluid">
+                        <div class="sidenav">
+                            <div class="container-fluid">
+                                <button class="w3-bar-item w3-hide-large" onclick="w3_close()"> &times;</button>
+                                <a href="home.html"><img src="img/go-back-left-arrow (1).svg" alt=""></a>
+                                <img src="img/101.svg" class="logo" alt="">
+                                <div class="main">
+                                    <h1>Main</h1>
+                                    <a href="dashboard-2.html">
+                                    <div class="dash d-flex menu">
+                                        <div class="side-nav-img  d-flex">
+                                            <img src="img/dashboard (1).svg" alt="">
+                                            <h2>Dashboard</h2>
+                                        </div>
+                                    </div>
+                                    </a>
+                                    <a href="safe.html">
+                                    <div class="Earnings d-flex menu">
+                                        <div class="side-nav-img d-flex">
+                                            <img src="img/safe (1).svg" alt="">
+                                            <h2>Safe</h2>
+                                        </div>
+                                    </div>
+                                    </a>
+                                    <a href="history.html">
+                                    <div class="Earnings d-flex menu">
+                                        <div class="side-nav-img d-flex">
+                                            <img src="img/History.svg" alt="">
+                                            <h2>History</h2>
+                                        </div>
+                                    </div>
+                                    </a>
+                                    <a href="archive.html">
+                                    <div class="Earnings d-flex menu">
+                                        <div class="side-nav-img d-flex">
+                                            <img src="img/Archive.svg" alt="">
+                                            <h2>Aechive</h2>
+                                        </div>
+                                    </div>
+                                    </a>
+                                </div>
+                                <div class="Upcoming">
+                                    <h1>Upcoming</h1>
+                                    <a href="order.html">
+                                    <div class="dash d-flex menu">
+                                        <div class="side-nav-img d-flex">
+                                            <img src="img/orders (1).svg" alt="">
+                                            <h2>Order</h2>
+                                        </div>
+                                    </div>
+                                    </a>
+                                    <a href="recipts.html">
+                                    <div class="Earnings d-flex menu">
+                                        <div class="side-nav-img d-flex">
+                                            <img src="img/receipts.svg" alt="">
+                                            <h2>Receipts</h2>
+                                        </div>
+                                    </div>
+                                    </a>
+                                </div>
+                                <div class="Kitchen">
+                                    <h1>Kitchen</h1>
+                                    <a href="menu.html">
+                                    <div class="dash d-flex menu">
+                                        <div class="side-nav-img d-flex">
+                                            <img src="img/menu.svg" alt="">
+                                            <h2>Menu</h2>
+                                        </div>
+                                    </div>
+                                    </a>
+                                    <a href="stcok.html">
+                                    <div class="Earnings d-flex menu">
+                                        <div class="side-nav-img d-flex">
+                                            <img src="img/stock.svg" alt="">
+                                            <h2>Stock</h2>
+                                        </div>
+                                    </div>
+                                    </a>
+                                    <a href="repices.html">
+                                    <div class="Earnings d-flex menu">
+                                        <div class="side-nav-img d-flex">
+                                            <img src="img/recipes.svg" alt="">
+                                            <h2>Recipes</h2>
+                                        </div>
+                                    </div>
+                                    </a>
+                                </div>
+                                <div class="Gym">
+                                    <h1>Restaurant</h1>
+                                    <a href="table.html">
+                                        <div class="Branches d-flex menu">
+                                            <div class="side-nav-img d-flex">
+                                                <img src="img/table.svg" alt="">
+                                                <h2>Table</h2>
+                                            </div>
+                                    </div>
+                                    </a>
+                                    <a href="device-2.html">
+                                        <div class="Offers d-flex menu">
+                                            <div class="side-nav-img d-flex">
+                                                <img src="img/devices.svg" alt="">
+                                                <h2>Devices</h2>
+                                            </div>
+                                    </div>
+                                    </a>
+                                    <a href="app.html">
+                                        <div class="Expenses d-flex menu">
+                                            <div class="side-nav-img active d-flex">
+                                                <img src="img/application-active.svg" alt="">
+                                                <h2>Application</h2>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="account-2.html">
+                                        <div class="Expenses d-flex menu">
+                                            <div class="side-nav-img d-flex">
+                                                <img src="img/accounts.svg" alt="">
+                                                <h2>Accounts</h2>
+                                            </div>
+                                    </div>
+                                    </a>
+                                </div>
+                                <div class="Reating">
+                                    <h1>Reating</h1>
+                                    <a href="question.html">
+                                    <div class="dash d-flex menu">
+                                        <div class="side-nav-img d-flex">
+                                            <img src="img/questions.svg" alt="">
+                                            <h2>Questions</h2>
+                                        </div>
+                                    </div>
+                                    </a>
+                                    <a href="ratting.html">
+                                    <div class="Earnings d-flex menu">
+                                        <div class="side-nav-img d-flex">
+                                            <img src="img/rating.svg" alt="">
+                                            <h2>User'Rating</h2>
+                                        </div>
+                                    </div>
+                                    </a>
+                                    <a href="branches-2.html">
+                                    <div class="Earnings d-flex menu">
+                                        <div class="side-nav-img d-flex">
+                                            <img src="img/back-arrow.svg" alt="">
+                                            <h2 class="color-red">Back To Main</h2>
+                                        </div>
+                                    </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="w3-main" style="margin-left:242px">
+            <div class="teal d-flex">
+                <button class="button w3-xlarge w3-hide-large" onclick="w3_open()">&#9776;</button>
+                <nav>
+                    <div class="w3-container">
+                        <!-- <nav> -->
+                                            <div class="container-fluid">
+                                                <div class="div d-flex">
+                                                    <div class="right">
+                                                        <h1>Dashboard</h1>
+                                                    </div>
+                                                    <div class="left d-flex">   
+                                                        <a href="#!"><img src="img/cctv.svg" class="cctv"></a>
+                                                        <a class="openCvBtn" href="#!" id="openApplayForm"><img src="img/bell-solid (1).svg" class="cctv"></a>
+                                                        <a href="person.html"><img src="img/10.png"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                        <!-- </nav> -->
+                    </div>
+                </nav>
+            </div>
+            <div class="restOfScreen">
+                <div class="">
+                    <div class="container-fluid ">
+                        <div class="col-lg-12 d-flex">
+                            <div class="col-lg-3 col-md-4">
+                                <div class="tab between">
+                                    <div>
+                                        <h1>MAIN</h1>
+                                        <button class="tablinks ">Deals</button>
+                                        <button class="tablinks "><a href="app.html"> Interests</a></button>
+                                        <button class="tablinks "><a href="app-2.html"> Live videos </a></button>
+                                        <button class="tablinks "><a href="app-3.html"> VAT & Service </a></button>
+                                        <button class="tablinks active"><a href="#!">Camera IP </a></button>
+                                        <button class="tablinks"><a href="app-5.html">Settings </a></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-9 col-md-8">
+                                <div class="container-fluid ">
+                                    <div class="live">
+                                        <h1>Live Videos</h1>
+                                        <p>The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox.</p>
+                                        <span class="nav-span">IP Address</span>
+                                        <div class="input-img">
+                                            <input type="text"  placeholder="https://youtu.be/EEIk7gwjgIM">
+                                        </div>
+                                        <input type="text" class="input-img-1" placeholder="Url">
+                                        <a href="#!" class="trash"><img src="img/trash-alt-solid.svg" alt=""></a>
+                                        <div class="live-apend"></div>
+                                        <div class="add-anthor"><a href="#!">+ Add New</a></div>
+                                        <h1>Kitchen restaurant</h1>
+                                        <p>The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox.</p>
+                                        <input type="text"  placeholder="IP Address">
+                                        <div class="live-apend-1"></div>
+                                        <label class="container-2"> Don't show camera
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <div class="add-anthor-1"><a href="#!">+ Add New</a></div>
+                                        <div class="color-a"><a href="#!" class="add-a">Save</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plus">
+                        <a href="#!">
+                            <img src="img/plus-circle-solid.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="js/home.js"></script>
+</body>
+</html>
