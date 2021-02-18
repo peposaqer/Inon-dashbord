@@ -697,7 +697,7 @@ label span {
   content: '\2714'; /* Ok/check mark */
 
   margin-right: 2.2px;
-  margin-left: 2.2px;
+  margin-left: 6.2px;
 }
 
 .simplecolorpicker.glyphicons span.color[data-selected]:after {
@@ -726,9 +726,9 @@ label span {
     border: 1px solid #000;
     width: 25px;
     height: 25px;
-    position: relative;
+    /* position: relative;
     left: 20.5rem;
-    bottom: 4.6rem;
+    bottom: 4.6rem; */
     /* background-image: url(../img/plus-solid.svg); */
 }
 
@@ -739,10 +739,10 @@ label span {
 }
 
 input[type="color"] {
-    position: relative;
+    /* position: relative;
     padding-right: .5rem !important;
     width: auto !important;
-    /* background-image: url(../img/plus-solid.svg); */
+    background-image: url(../img/plus-solid.svg);
     background-size: cover;
     cursor: pointer;
     background-color: transparent;
@@ -751,7 +751,38 @@ input[type="color"] {
     background: none;
     border-radius: none !important;
     border: none !important;
-    padding-left: 2.1rem !important;
+    padding-left: 2.1rem !important; */
+    visibility: hidden;
+}
+
+#color-picker-1,
+#color-picker-2,
+#color-picker-3,
+#color-picker-4 {
+  position: relative;
+  width: 24px;
+  height: 15px;
+  display: block;
+}
+
+#color {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  /* background-image: url(../img/plus-solid.svg); */
+  background-repeat: round;
+  /* border-radius: 100%; */
+  border: 1px solid #000;
+}
+
+#color i {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    margin-top: .13rem;
 }
 
 

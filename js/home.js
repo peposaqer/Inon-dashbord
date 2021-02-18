@@ -2,8 +2,13 @@ $(document).ready(function () {
   $("#save").click(function () {
     var textinput = $(".testinput").val();
     $("ul").append(
-      '<li><div class="question-div"><div class="between"><h1>' + textinput + '</h1><div class="d-flex"><a href="#!" data-toggle="modal" data-target="#myModal"><img src="img/pen-solid (1).svg" alt=""></a><img src="img/trash-alt-solid.svg" alt=""></div></div></div></li>'
+      '<li><div class="question-div"><div class="between"><h1>' +
+        textinput +
+        '</h1><div class="d-flex"><a href="#!" data-toggle="modal" data-target="#myModal"><img src="img/pen-solid (1).svg" alt=""></a><a href="#!" class="trash-img" ><img src="img/trash-alt-solid.svg" alt=""></a></div></div></div></li>'
     );
+    $(".trash-img").click(function () {
+      $(".question-div").hide(2000);
+    });
   });
 
 $("#openApplayForm").on("click", function () {
@@ -105,6 +110,37 @@ $(".custom-go").on("change", function () {
   
 });
 
+
+function readURL(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+
+    reader.onload = function (e) {
+      $("#blah").attr("src", e.target.result);
+    };
+
+    reader.readAsDataURL(input.files[0]); // convert to base64 string
+  }
+}
+
+$("#imgInp").change(function () {
+  readURL(this);
+});
+
+
+$("#input").change(function () {
+  var color = $(this).val();
+  //  $("#color-code").html(color);
+  //  $("#color").css({ "background-color": color });
+  $("#firstSelect").append(
+    '<option value="' + color + '">' + color + '</option>'
+  );
+  $('select[name="colorpicker-option-selected"]').simplecolorpicker("destroy");
+  $('select[name="colorpicker-option-selected"]').simplecolorpicker({
+    theme: "regularfont",
+  });
+});
+
 function w3_open() {
   document.getElementById("mySidebar").style.display = "block";
 }
@@ -112,150 +148,6 @@ function w3_open() {
 function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
 }
-
-window.onload = function () {
-  var chart = new CanvasJS.Chart("chartContainer-1", {
-    animationEnabled: true,
-    title: {
-      text: "EARNINGS",
-    },
-    toolTip: {
-      shared: true,
-    },
-    // axisX: {
-    //   title: "Time",
-    //   suffix: " s",
-    // },
-    axisY: {
-      // title: "Speed",
-      titleFontColor: "#4F81BC",
-      suffix: " m/s",
-      lineColor: "#4F81BC",
-      tickColor: "#4F81BC",
-    },
-    axisY2: {
-      // title: "Distance",
-      titleFontColor: "#C0504E",
-      suffix: " m",
-      lineColor: "#C0504E",
-      tickColor: "#C0504E",
-    },
-    data: [
-      {
-        type: "spline",
-        name: "speed",
-        xValueFormatString: "#### sec",
-        yValueFormatString: "#,##0.00 m/s",
-        dataPoints: [
-          { x: 0, y: 0 },
-          { x: 11, y: 8.2 },
-          { x: 47, y: 41.7 },
-          { x: 56, y: 16.7 },
-          { x: 120, y: 31.3 },
-          { x: 131, y: 18.2 },
-          { x: 171, y: 31.3 },
-          { x: 189, y: 61.1 },
-          { x: 221, y: 40.6 },
-          { x: 232, y: 18.2 },
-          { x: 249, y: 35.3 },
-          { x: 253, y: 12.5 },
-          { x: 264, y: 16.4 },
-          { x: 280, y: 37.5 },
-          { x: 303, y: 24.3 },
-          { x: 346, y: 23.3 },
-          { x: 376, y: 11.3 },
-          { x: 388, y: 8.3 },
-          { x: 430, y: 1.9 },
-          { x: 451, y: 4.8 },
-        ],
-      },
-      {
-        type: "spline",
-        axisYType: "secondary",
-        name: "distance covered",
-        yValueFormatString: "#,##0.# m",
-        dataPoints: [
-          { x: 0, y: 0 },
-          { x: 11, y: 90 },
-          { x: 47, y: 1590 },
-          { x: 56, y: 1740 },
-          { x: 120, y: 3740 },
-          { x: 131, y: 3940 },
-          { x: 171, y: 5190 },
-          { x: 189, y: 6290 },
-          { x: 221, y: 7590 },
-          { x: 232, y: 7790 },
-          { x: 249, y: 8390 },
-          { x: 253, y: 8440 },
-          { x: 264, y: 8620 },
-          { x: 280, y: 9220 },
-          { x: 303, y: 9780 },
-          { x: 346, y: 10780 },
-          { x: 376, y: 11120 },
-          { x: 388, y: 11220 },
-          { x: 430, y: 11300 },
-          { x: 451, y: 11400 },
-        ],
-      },
-    ],
-  });
-  chart.render();
-};
-
-// window.onload = function () {
-//   //Better to construct options first and then pass it as a parameter
-//   var options = {
-//     title: {
-//       text: "Spline Chart with Export as Image",
-//     },
-//     animationEnabled: true,
-//     exportEnabled: true,
-//     data: [
-//       {
-//         type: "spline", //change it to line, area, column, pie, etc
-//         dataPoints: [
-//           { x: 10, y: 10 },
-//           { x: 20, y: 12 },
-//           { x: 30, y: 8 },
-//           { x: 40, y: 14 },
-//           { x: 50, y: 6 },
-//           { x: 60, y: 24 },
-//           { x: 70, y: -4 },
-//           { x: 80, y: 10 },
-//         ],
-//       },
-//     ],
-//   };
-//   $("#chartContainer-1").CanvasJSChart(options);
-// };
-
-// window.onload = function () {
-//   //Better to construct options first and then pass it as a parameter
-//   var options = {
-//     title: {
-//       text: "Spline Chart with Export as Image",
-//     },
-//     animationEnabled: true,
-//     exportEnabled: true,
-//     data: [
-//       {
-//         type: "spline", //change it to line, area, column, pie, etc
-//         dataPoints: [
-//           { x: 10, y: 10 },
-//           { x: 20, y: 12 },
-//           { x: 30, y: 8 },
-//           { x: 40, y: 14 },
-//           { x: 50, y: 6 },
-//           { x: 60, y: 24 },
-//           { x: 70, y: -4 },
-//           { x: 80, y: 10 },
-//         ],
-//       },
-//     ],
-//   };
-//   $("#chartContainer").CanvasJSChart(options);
-// };
-
 
 function openCity(evt, cityName) {
   var i, tabcontent, tablinks;
@@ -286,18 +178,11 @@ function openSolve(evt, cityName) {
 }
 
 (function ($) {
-  "use strict";
 
-  /**
-   * Constructor.
-   */
+  "use strict";
   var SimpleColorPicker = function (select, options) {
     this.init("simplecolorpicker", select, options);
   };
-
-  /**
-   * SimpleColorPicker class.
-   */
   SimpleColorPicker.prototype = {
     constructor: SimpleColorPicker,
 
@@ -503,11 +388,6 @@ function openSolve(evt, cityName) {
       this.$select.show();
     },
   };
-
-  /**
-   * Plugin definition.
-   * How to use: $('#id').simplecolorpicker()
-   */
   $.fn.simplecolorpicker = function (option) {
     var args = $.makeArray(arguments);
     args.shift();
@@ -528,10 +408,6 @@ function openSolve(evt, cityName) {
       }
     });
   };
-
-  /**
-   * Default options.
-   */
   $.fn.simplecolorpicker.defaults = {
     // No theme by default
     theme: "",
@@ -555,125 +431,10 @@ $(document).ready(function () {
     }
   );
 
-  setTimeout(function () {
-    $('select[name="colorpicker-selectColor-#fbd75b"]').simplecolorpicker(
-      "selectColor",
-      "#fbd75b"
-    );
-  }, 5000);
-
-  setTimeout(function () {
-    $('select[name="colorpicker-selectColor-#FBD75B"]').simplecolorpicker(
-      "selectColor",
-      "#FBD75B"
-    );
-  }, 5000);
-
-  setTimeout(function () {
-    $(
-      'select[name="colorpicker-selectColor-#fbd75b-multiple"]'
-    ).simplecolorpicker("selectColor", "#fbd75b");
-  }, 5000);
-
-  setTimeout(function () {
-    // Generates a JavaScript error
-    $('select[name="colorpicker-selectColor-unknown"]').simplecolorpicker(
-      "selectColor",
-      "unknown"
-    );
-  }, 5000);
-
-  setTimeout(function () {
-    $(
-      'select[name="colorpicker-picker-selectColor-#fbd75b"]'
-    ).simplecolorpicker("selectColor", "#fbd75b");
-  }, 5000);
-
-  setTimeout(function () {
-    // Generates a JavaScript error
-    $(
-      'select[name="colorpicker-picker-selectColor-unknown"]'
-    ).simplecolorpicker("selectColor", "unknown");
-  }, 5000);
-
   $("#init").on("click", function () {
-    $('select[name="colorpicker-shortlist"]').simplecolorpicker();
-    $('select[name="colorpicker-longlist"]').simplecolorpicker();
-    $('select[name="colorpicker-notheme"]').simplecolorpicker();
-    $('select[name="colorpicker-regularfont"]').simplecolorpicker({
+    $('select[name="colorpicker-option-selected"]').simplecolorpicker({
       theme: "regularfont",
     });
-    $('select[name="colorpicker-glyphicons"]').simplecolorpicker({
-      theme: "glyphicons",
-    });
-    $('select[name="colorpicker-fontawesome"]').simplecolorpicker({
-      theme: "fontawesome",
-    });
-    $('select[name="colorpicker-bootstrap3-form"]').simplecolorpicker({
-      theme: "glyphicons",
-    });
-    $('select[name="colorpicker-modal-inline"]').simplecolorpicker();
-    $('select[name="colorpicker-modal-picker"]').simplecolorpicker({
-      picker: true,
-    });
-    $('select[name="colorpicker-option-selected"]').simplecolorpicker({
-      theme: "glyphicons",
-    });
-    $('select[name="colorpicker-options-disabled"]').simplecolorpicker({
-      theme: "glyphicons",
-    });
-    $('select[name="colorpicker-option-selected-disabled"]').simplecolorpicker({
-      theme: "glyphicons",
-    });
-    $('select[name="colorpicker-optgroups"]').simplecolorpicker();
-    $('select[name="colorpicker-change-background-color"]').simplecolorpicker();
-    $('select[name="colorpicker-selectColor-#fbd75b"]').simplecolorpicker({
-      theme: "glyphicons",
-    });
-    $('select[name="colorpicker-selectColor-#FBD75B"]').simplecolorpicker({
-      theme: "glyphicons",
-    });
-    $(
-      'select[name="colorpicker-selectColor-#fbd75b-multiple"]'
-    ).simplecolorpicker({ theme: "glyphicons" });
-    $('select[name="colorpicker-selectColor-unknown"]').simplecolorpicker({
-      theme: "glyphicons",
-    });
-
-    $('select[name="colorpicker-picker-shortlist"]').simplecolorpicker({
-      picker: true,
-      theme: "glyphicons",
-    });
-    $('select[name="colorpicker-picker-longlist"]').simplecolorpicker({
-      picker: true,
-      theme: "glyphicons",
-    });
-    $('select[name="colorpicker-picker-delay"]').simplecolorpicker({
-      picker: true,
-      theme: "glyphicons",
-      pickerDelay: 1000,
-    });
-    $('select[name="colorpicker-picker-option-selected"]').simplecolorpicker({
-      picker: true,
-      theme: "glyphicons",
-    });
-    $('select[name="colorpicker-picker-options-disabled"]').simplecolorpicker({
-      picker: true,
-      theme: "glyphicons",
-    });
-    $(
-      'select[name="colorpicker-picker-option-selected-disabled"]'
-    ).simplecolorpicker({ picker: true, theme: "glyphicons" });
-    $('select[name="colorpicker-picker-optgroups"]').simplecolorpicker({
-      picker: true,
-      theme: "glyphicons",
-    });
-    $(
-      'select[name="colorpicker-picker-selectColor-#fbd75b"]'
-    ).simplecolorpicker({ picker: true, theme: "glyphicons" });
-    $(
-      'select[name="colorpicker-picker-selectColor-unknown"]'
-    ).simplecolorpicker({ picker: true, theme: "glyphicons" });
   });
 
   $("#destroy").on("click", function () {
@@ -683,7 +444,6 @@ $(document).ready(function () {
   // By default, activate simplecolorpicker plugin on HTML selects
   $("#init").trigger("click");
 });
-
 
 // filterDiv
 filterSelection("all");
@@ -720,6 +480,7 @@ function w3RemoveClass(element, name) {
   element.className = arr1.join(" ");
 }
 // Add active class to the current button (highlight it)
+
 var btnContainer = document.getElementById("myBtnContainer");
 var btns = btnContainer.getElementsByClassName("table");
 for (var i = 0; i < btns.length; i++) {
@@ -728,12 +489,10 @@ for (var i = 0; i < btns.length; i++) {
     current[0].className = current[0].className.replace(" active", "");
     this.className += " active";
   });
-  $(".table").click(function (e) {
+  $(".table a").click(function (e) {
     $(".table.active").removeClass("active");
-    // console.log(",fvds");
     var $parent = $(this).parent();
     $parent.addClass("active");
-    // console.log(",jsgnvbjkldfnbj");
     e.preventDefault();
   });
 }
