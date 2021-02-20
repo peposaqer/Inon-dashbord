@@ -554,7 +554,7 @@ input[type="date"] {
 @media (min-width: 426px) and (max-width: 1024px) {
 
 .button-all {
-    padding-left: 10% !important;
+    padding-left: 20% !important;
 }
 
 .week {

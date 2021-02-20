@@ -491,10 +491,12 @@ for (var i = 0; i < btns.length; i++) {
   });
   $(".table a").click(function (e) {
     $(".table.active").removeClass("active");
+    $(".side-nav-img.active").css({"color": "#A20A0A","border-left": "4px solid #A20A0A","margin-left":"-4px"});
+    $(".side-nav-img.active h2").css("font-weight", "bold");
     var $parent = $(this).parent();
     $parent.addClass("active");
     e.preventDefault();
-  });
+  }); 
 }
 // end filterDiv //
 
